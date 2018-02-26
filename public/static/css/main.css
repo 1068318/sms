@@ -1,0 +1,30 @@
+
+#bg1 {	background-image: url(images/reply-bg-top.jpg);
+	background-repeat: repeat-x;
+}
+#bg2 {	background-image: url(images/reply-bg-under.jpg);
+	background-repeat: repeat-x;
+}
+#bg3 {
+	background-image: url(images/reply-bg-l.jpg);
+	background-repeat: repeat-y;
+}
+#bg4 {	background-image: url(images/reply-bg-r.jpg);
+	background-repeat: repeat-y;
+}
+.g {
+	background-image: url(images/reply-bg-top-g.jpg);
+	background-repeat: repeat-x;
+}
+#g1 {
+	background-image: url(images/reply-bg-l-g.jpg);
+	background-repeat: repeat-y;
+}
+#g2 {
+	background-image: url(images/reply-bg-r-g.jpg);
+	background-repeat: repeat-y;
+}
+#g3 {
+	background-image: url(images/reply-bg-under-g.jpg);
+	background-repeat: repeat-x;
+}

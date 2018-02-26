@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="{$Think.config.site.meta_charset}">
+	<title>{$Think.config.site.title}</title>
+
+	<script type="text/javascript">var base_path="__CSS__";</script>
+	{load href="__JS__/jquery-1.8.3.min.js,__JS__/core.js,__JS__/jquery-ui.min.js,__JS__/ui/ui.widget.js,__JS__/ui/ui.mouse.js,__JS__/superfish.js,__JS__/live_search.js,__JS__/tooltip.js,__JS__/cookie.js,__JS__/ui/ui.sortable.js,__JS__/ui/ui.draggable.js,__JS__/ui/ui.resizable.js,__JS__/ui/ui.position.js,__JS__/ui/ui.button.js,__JS__/ui/ui.dialog.js,__JS__/custom.js"}
+	
+	{load href="__CSS__/colorbox.css,__CSS__/ui/ui.base.css"}
+	<link href="__CSS__/themes/black_rose/ui.css" rel="stylesheet" title="style" media="all" />
+	{// 上面这句单独写，因为改变theme的时候需要用到上面的title=style这个dom}
+
+
+<script type="text/javascript">
+	function win_open_update_pwd(){
+        window.open("{:url('user/updatepasswd')}","","scrollbars=yes,width=750,height=400,location=no,resizable=no");
+	}
+</script>
+</head>
+
+<body>
+	<div id="page_wrapper">
+		<div id="page-header">
+			<div id="page-header-wrapper">
+
+				<div id="top">
+					<a href="__ROOT__" style="background:url('__STATIC__/upload/logo/logo.png') left 40% no-repeat;" class='logo' ></a>					<div class="welcome">
+					<span class="note">
+					</span>
+						<span class="note">欢迎,{$Think.session.userinfo.username}</span>
+						<!--<a class="btn ui-state-default ui-corner-all" href='javascript:void(0);' onclick='win_open_back()'>-->
+							<!--<span class="ui-icon ui-icon-wrench"></span>-->
+							<!--意见反馈-->
+						<!--</a>-->
+						<a class="btn ui-state-default ui-corner-all" href='javascript:void(0);' onclick='win_open_update_pwd("{:url('user/updatepasswd')}")'>
+							<span class="ui-icon ui-icon-person"></span>
+							修改密码
+						</a>
+						<a class="btn ui-state-default ui-corner-all" href="{:url('user/logout')}">
+							<span class="ui-icon ui-icon-power"></span>
+							注销
+						</a>
+					</div>
+				</div>
+				<ul id="navigation">
+                    <li>
+						<a href="__ROOT__" class="sf-with-ul">我的首页</a>
+					</li>
+		<li id='1'>
+		<a href="{:url('device/index')}" class="sf-with-ul">设备管控</a>
+		<ul>  
+		<li><a href="{:url('device/index')}">设备管控</a></li></ul>
+		</li>
+			<li id='2'>
+		<a href="{:url('preview/index')}" class="sf-with-ul">拍摄图片预览</a>
+		<ul>  
+		<li><a href="{:url('preview/index')}">拍摄图片预览</a></li></ul>
+		</li>
+
+			<li id='4'>
+		<a href="{:url('user/userlist')}" class="sf-with-ul">系统管理</a>
+		<ul>
+		<li><a href="{:url('user/userlist')}">用户管理</a></li>
+		</ul>
+
+		</div>
+
+		</div>

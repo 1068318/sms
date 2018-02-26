@@ -1,0 +1,8 @@
+---------------------------------------------------------------
+[ 2018-02-08T11:12:09+08:00 ] 0.0.0.0 GET /t5/sms/
+[ info ] localhost/t5/sms/ [运行时间：0.548466s][吞吐率：1.82req/s] [内存消耗：1,276.10kb] [文件加载：63]
+[ error ] [0]语法解析错误: syntax error, unexpected ';', expecting ',' or ')'[D:\Program Files (x86)\EasyPHP14.1VC11\data\localweb\t5\sms\application\home\api\Index.php:57]
+---------------------------------------------------------------
+[ 2018-02-08T11:16:57+08:00 ] 0.0.0.0 GET /t5/sms/
+[ info ] localhost/t5/sms/ [运行时间：0.068513s][吞吐率：14.60req/s] [内存消耗：1,581.19kb] [文件加载：71]
+[ error ] [0]致命错误: Call to undefined function app\home\api\sha256()[D:\Program Files (x86)\EasyPHP14.1VC11\data\localweb\t5\sms\application\home\api\Index.php:57]

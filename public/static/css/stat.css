@@ -1,0 +1,12 @@
+#content_search {
+		width:100%;
+		position:absolute;
+		text-align:center;
+		top:45%;
+	}
+#content_chart {
+	width:100%;
+	position:absolute;
+	text-align:center;
+	top:35%;
+}

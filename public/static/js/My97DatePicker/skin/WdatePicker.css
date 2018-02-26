@@ -1,0 +1,20 @@
+.Wdate{
+	border:#999 1px solid;
+	height:20px;
+	background:#fff url(datePicker.gif) no-repeat right;
+}
+
+.Wdate_unit{
+	border:#999 1px solid;
+	height:20px;
+	background:#fff url(datePicker_unit.gif) no-repeat right;
+}
+.Wdate_role{
+	border:#999 1px solid;
+	height:20px;
+	background:#fff url(datePicker_role.gif) no-repeat right;
+}
+.WdateFmtErr{
+	font-weight:bold;
+	color:red;
+}

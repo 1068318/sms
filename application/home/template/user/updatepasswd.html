@@ -1,0 +1,66 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="{$Think.config.site.meta_charset}">
+	<title>{$Think.config.site.title}</title>
+    <script type="text/javascript" src="__JS__/jquery-1.8.3.min.js"></script>
+    <script>
+        function vn(){
+//
+            if ($.trim($("input[name='passwd']").val()) == '')
+            {
+                alert('请输入新密码.');
+                return false;
+            }
+
+            if ($.trim($("input[name='passwd']").val()).length <6 || $.trim($("input[name='passwd']").val()).length >12)
+            {
+                alert('新密码长度必须6-12位.');
+                return false;
+            }
+
+            if($.trim($("input[name='repasswd']").val()) == '')
+            {
+                alert('请再次输入要修改的密码');
+                return false;
+            }
+
+            if ($.trim($("input[name='passwd']").val()) != $.trim($("input[name='repasswd']").val()))
+            {
+                alert('两次输入的密码不相等.');
+                return false;
+            }
+        }
+
+    </script>
+</head>
+<body>
+<form action="{:url()}" method="post" onsubmit=" return vn();">
+    <!--<form action="{:url('map/track')}" method="post" >-->
+    <table border="0" align="center" cellpadding="0" cellspacing="0" style="font-size:14px; color:#666; font-family:'微软雅黑'">
+        <tr>
+            <td height="20" align="center" valign="middle">&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td height="60" align="left" valign="middle">新&nbsp;密&nbsp;码：　
+                <input type='password' name="passwd" style=" width:504px; height:34px; border:1;" ><font color="red">*</font>(6-12位)</td>
+        </tr>
+        <tr>
+            <td height="60" align="left" valign="middle">再次输入：&nbsp;&nbsp;
+                <input type='password' name="repasswd" style="width:504px; height:34px; border:1;" ><font color="red">*</font></td>
+        </tr>
+
+        <tr>
+            <td height="76" align="center" valign="middle"><input type="submit" name="submit"   value="确定" style="background-color:#0F93F7;border:1px solid #1677F9;text-align:center;cursor:pointer;height:27px;color:white;width:80px;">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="重置" style="background-color:#0F93F7;border:1px solid #1677F9;text-align:center;cursor:pointer;height:27px;color:white;width:80px;"></td>
+
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
+
+</body>
+</html>

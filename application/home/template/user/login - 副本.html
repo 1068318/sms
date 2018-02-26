@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="{$Think.config.site.meta_charset}">
+<title>{$Think.config.site.title}</title>
+{load href="__CSS__/style.css"}
+{load href="__JS__/jquery.js,__JS__/cloud.js"}
+
+<script language="javascript">
+     $(function(){
+         $('.loginbox').css({'position':'absolute','left':($(window).width()-692)/2});
+         $(window).resize(function(){
+             $('.loginbox').css({'position':'absolute','left':($(window).width()-692)/2});
+         })
+     });
+// 回车登录事件
+   $(document).keypress(function(e) {  
+         if(e.which == 13) {
+             jQuery(".loginbtn").click();
+         }
+     });
+
+ </script>
+
+<body style="background-color:#1c77ac; background-image:url(__IMAGES__/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
+
+
+
+<div id="mainBody">
+    <div id="cloud1" class="cloud"></div>
+    <div id="cloud2" class="cloud"></div>
+</div>
+
+
+<div class="logintop">
+    <span>欢迎登录政务手机管理系统</span>
+</div>
+
+<div class="loginbody">
+
+    <span class="systemlogo"></span>
+	<form action="{:url()}" method="post" onsubmit="return check()">
+		<div class="loginbox">
+			<ul>
+				<li>
+					<input name="username" type="text" class="loginuser" value="" placeholder="请输入用户名" /></li>
+				<li>
+					<input name="passwd" type="password" class="loginuser" value="" placeholder="请输入密码" /></li>
+					{:token($Think.config.site.form_token_name, 'sha1')}
+				<li><input name="" type="submit" class="loginbtn" value="登  录"  onclick="javascript:check();"/></li>
+			</ul>
+		</div>
+	</form>
+</div>
+
+
+
+<div class="loginbm">{$Think.config.site.copyright}</div>
+
+
+</body>
+
+<script>
+    function check(){
+
+        var username = $('input[name="username"]').val();
+        var password = $('input[name="password"]').val();
+
+        if(username == ''){
+            alert ('请输入用户名');
+            return false;
+        }
+
+        if(password == ''){
+
+            alert ('请输入密码');
+            return false;
+        }
+    }
+
+</script>
+
+</html>
