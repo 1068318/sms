@@ -1,2 +1,0 @@
-# sms
-mobile repo 
